@@ -1,0 +1,69 @@
+# Build outputs
+build/
+Build/
+Debug/
+Release/
+*.o
+*.obj
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+*.sym
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.settings/
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.venv/
+venv/
+
+# Excel temporary files
+~$*.xlsx
+~$*.xls
+
+# Documentation generation
+docs/_build/
+doxygen/
+
+# Test outputs
+test-results/
+coverage/
+
+# Sensitive files (DO NOT COMMIT)
+*.key
+*.pem
+*.crt
+.env
+.env.local
+secrets/
+credentials/
+
+# OS files
+*.DS_Store
+.Spotlight-V100
+.Trashes
+ehthumbs.db

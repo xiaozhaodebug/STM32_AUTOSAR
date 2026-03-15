@@ -1,0 +1,110 @@
+/* main.c 中 DBC 相关代码模板 (参考用) */
+
+/* 在主循环中添加: */
+
+/*==== 周期发送处理 ====*/
+static uint32_t lastMeg_ResDiagTx = 0;
+static uint32_t lastMeg_NmTxTx = 0;
+static uint32_t lastXZ_A_Led_StateTx = 0;
+static uint32_t lastXZ_A_KEY_StateTx = 0;
+static uint32_t lastXZ_A_Power_StateTx = 0;
+
+/* 发送 Meg_ResDiag (0x73d), 100ms 周期 */
+if ((gTickCount - lastMeg_ResDiagTx) >= 100) {
+    lastMeg_ResDiagTx = gTickCount;
+    Meg_ResDiag_t meg_resdiag = {0};
+    /* 填充信号值 */
+    /* meg_resdiag.Sig_ResDiag = ...; */
+    Dbc_Pack_Meg_ResDiag(canTxData, &meg_resdiag);
+    /* 调用 CanDriver_Send 发送 */
+}
+
+/* 发送 Meg_NmTx (0x601), 100ms 周期 */
+if ((gTickCount - lastMeg_NmTxTx) >= 100) {
+    lastMeg_NmTxTx = gTickCount;
+    Meg_NmTx_t meg_nmtx = {0};
+    /* 填充信号值 */
+    /* meg_nmtx.Sig_NmTx_Nid = ...; */
+    Dbc_Pack_Meg_NmTx(canTxData, &meg_nmtx);
+    /* 调用 CanDriver_Send 发送 */
+}
+
+/* 发送 XZ_A_Led_State (0x210), 50ms 周期 */
+if ((gTickCount - lastXZ_A_Led_StateTx) >= 50) {
+    lastXZ_A_Led_StateTx = gTickCount;
+    XZ_A_Led_State_t xz_a_led_state = {0};
+    /* 填充信号值 */
+    /* xz_a_led_state.Led1_State = ...; */
+    /* xz_a_led_state.Led2_State = ...; */
+    /* xz_a_led_state.Led3_State = ...; */
+    /* xz_a_led_state.Led4_State = ...; */
+    Dbc_Pack_XZ_A_Led_State(canTxData, &xz_a_led_state);
+    /* 调用 CanDriver_Send 发送 */
+}
+
+/* 发送 XZ_A_KEY_State (0x211), 30ms 周期 */
+if ((gTickCount - lastXZ_A_KEY_StateTx) >= 30) {
+    lastXZ_A_KEY_StateTx = gTickCount;
+    XZ_A_KEY_State_t xz_a_key_state = {0};
+    /* 填充信号值 */
+    /* xz_a_key_state.Key1_State = ...; */
+    /* xz_a_key_state.Key2_State = ...; */
+    /* xz_a_key_state.Key3_State = ...; */
+    /* xz_a_key_state.Key4_State = ...; */
+    Dbc_Pack_XZ_A_KEY_State(canTxData, &xz_a_key_state);
+    /* 调用 CanDriver_Send 发送 */
+}
+
+/* 发送 XZ_A_Power_State (0x212), 50ms 周期 */
+if ((gTickCount - lastXZ_A_Power_StateTx) >= 50) {
+    lastXZ_A_Power_StateTx = gTickCount;
+    XZ_A_Power_State_t xz_a_power_state = {0};
+    /* 填充信号值 */
+    /* xz_a_power_state.KL15_State = ...; */
+    /* xz_a_power_state.ADC_Value = ...; */
+    Dbc_Pack_XZ_A_Power_State(canTxData, &xz_a_power_state);
+    /* 调用 CanDriver_Send 发送 */
+}
+
+/*==== 接收处理 ====*/
+switch (rxMsg.Id) {
+    case MSG_ID_MEG_FUNDIAG: {
+        Meg_FunDiag_t meg_fundiag;
+        Dbc_Parse_Meg_FunDiag(rxMsg.Data, &meg_fundiag);
+        /* 处理接收到的信号 */
+        /* meg_fundiag.Sig_FunDiag ... */
+        break;
+    }
+    case MSG_ID_MEG_PHYDIAG: {
+        Meg_PhyDiag_t meg_phydiag;
+        Dbc_Parse_Meg_PhyDiag(rxMsg.Data, &meg_phydiag);
+        /* 处理接收到的信号 */
+        /* meg_phydiag.Sig_PhyDiag ... */
+        break;
+    }
+    case MSG_ID_MEG_NMRX: {
+        Meg_NmRx_t meg_nmrx;
+        Dbc_Parse_Meg_NmRx(rxMsg.Data, &meg_nmrx);
+        /* 处理接收到的信号 */
+        /* meg_nmrx.Sig_NmRx_Nid ... */
+        break;
+    }
+    case MSG_ID_XZ_B_MOTORSTATE: {
+        XZ_B_MotorState_t xz_b_motorstate;
+        Dbc_Parse_XZ_B_MotorState(rxMsg.Data, &xz_b_motorstate);
+        /* 处理接收到的信号 */
+        /* xz_b_motorstate.OnOff ... */
+        /* xz_b_motorstate.CarSpeed ... */
+        break;
+    }
+    case MSG_ID_XZ_B_CTRL_STATE: {
+        XZ_B_Ctrl_State_t xz_b_ctrl_state;
+        Dbc_Parse_XZ_B_Ctrl_State(rxMsg.Data, &xz_b_ctrl_state);
+        /* 处理接收到的信号 */
+        /* xz_b_ctrl_state.Ctrl_Led3_State ... */
+        /* xz_b_ctrl_state.Ctrl_Led4_State ... */
+        break;
+    }
+    default:
+        break;
+}
