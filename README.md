@@ -34,6 +34,29 @@ An AUTOSAR communication stack demonstration project based on STM32F407, support
 
 ---
 
+## 🎬 Demo Video
+
+Watch the project demonstration video to see the AUTOSAR CAN communication and UDS diagnostics in action!
+
+<p align="center">
+  <a href="docs/videos/demo.mp4">
+    <img src="docs/images/qrcode.jpg" alt="Demo Video" width="400">
+  </a>
+  <br>
+  <b>📹 Click to view demo video</b>
+</p>
+
+**Video Contents:**
+- 🔌 Hardware connection and setup
+- 📡 CAN message transmission and reception
+- 🔍 UDS diagnostic service demonstration
+- 🛠️ DBC code generation workflow
+- 📊 Real-time debugging with serial output
+
+> **Note:** The demo video (`docs/videos/demo.mp4`) is included in the repository. You can also download it from the [Releases](https://github.com/xiaozhaodebug/STM32F407_AUTOSAR/releases) page.
+
+---
+
 ## 🔧 Hardware Platform
 
 ### Main Controller

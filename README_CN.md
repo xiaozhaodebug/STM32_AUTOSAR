@@ -17,6 +17,27 @@
 - **串口调试**：USART1 115200bps，带完整调试日志
 - **LED 控制**：支持 3 个 LED 状态指示
 
+## 🎬 演示视频
+
+观看项目演示视频，了解 AUTOSAR CAN 通信和 UDS 诊断的实际运行效果！
+
+<p align="center">
+  <a href="docs/videos/demo.mp4">
+    <img src="docs/images/qrcode.jpg" alt="演示视频" width="400">
+  </a>
+  <br>
+  <b>📹 点击观看演示视频</b>
+</p>
+
+**视频内容包括：**
+- 🔌 硬件连接和配置
+- 📡 CAN 消息收发演示
+- 🔍 UDS 诊断服务演示
+- 🛠️ DBC 代码生成工作流
+- 📊 串口实时调试输出
+
+> **注意：** 演示视频 (`docs/videos/demo.mp4`) 已包含在仓库中。你也可以从 [Releases](https://github.com/xiaozhaodebug/STM32F407_AUTOSAR/releases) 页面下载。
+
 ## 硬件平台
 
 ### 主控芯片
