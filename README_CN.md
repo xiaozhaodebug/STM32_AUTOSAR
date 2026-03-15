@@ -36,7 +36,7 @@
 - 🛠️ DBC 代码生成工作流
 - 📊 串口实时调试输出
 
-> **注意：** 演示视频 (`docs/videos/demo.mp4`) 已包含在仓库中。你也可以从 [Releases](https://github.com/xiaozhaodebug/STM32F407_AUTOSAR/releases) 页面下载。
+> **注意：** 演示视频 (`docs/videos/demo.mp4`) 已包含在仓库中。你也可以从 [Releases](https://github.com/xiaozhaodebug/STM32_AUTOSAR/releases) 页面下载。
 
 ## 硬件平台
 
@@ -81,7 +81,7 @@
 ## 项目结构
 
 ```
-STM32F407_AUTOSAR/
+STM32_AUTOSAR/
 ├── AUTOSAR/              # AUTOSAR 协议栈
 │   ├── CanIf/           # CAN 接口层
 │   ├── PduR/            # PDU 路由

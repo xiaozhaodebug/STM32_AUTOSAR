@@ -53,7 +53,7 @@ Watch the project demonstration video to see the AUTOSAR CAN communication and U
 - 🛠️ DBC code generation workflow
 - 📊 Real-time debugging with serial output
 
-> **Note:** The demo video (`docs/videos/demo.mp4`) is included in the repository. You can also download it from the [Releases](https://github.com/xiaozhaodebug/STM32F407_AUTOSAR/releases) page.
+> **Note:** The demo video (`docs/videos/demo.mp4`) is included in the repository. You can also download it from the [Releases](https://github.com/xiaozhaodebug/STM32_AUTOSAR/releases) page.
 
 ---
 
@@ -112,8 +112,8 @@ Watch the project demonstration video to see the AUTOSAR CAN communication and U
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-username/STM32F407_AUTOSAR.git
-cd STM32F407_AUTOSAR
+git clone https://github.com/your-username/STM32_AUTOSAR.git
+cd STM32_AUTOSAR
 ```
 
 ### 2. Build Project
