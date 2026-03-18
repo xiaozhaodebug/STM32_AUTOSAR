@@ -6,7 +6,9 @@
 [![Platform: STM32](https://img.shields.io/badge/Platform-STM32F407-blue.svg)](https://www.st.com/en/microcontrollers-microprocessors/stm32f407.html)
 [![Standard: AUTOSAR](https://img.shields.io/badge/Standard-AUTOSAR-green.svg)](https://www.autosar.org/)
 
-An AUTOSAR communication stack demonstration project based on STM32F407, supporting CAN communication and UDS diagnostic services.
+> 🎯 **Our Mission: Building a low-barrier platform for learning embedded systems - no prior programming experience required.**
+
+An AUTOSAR communication stack demonstration project based on STM32F407, supporting CAN communication and UDS diagnostic services. Start from scratch and get hands-on experience with automotive embedded development.
 
 ## 📋 Table of Contents
 

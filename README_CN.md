@@ -6,7 +6,9 @@
 [![Platform: STM32](https://img.shields.io/badge/Platform-STM32F407-blue.svg)](https://www.st.com/en/microcontrollers-microprocessors/stm32f407.html)
 [![Standard: AUTOSAR](https://img.shields.io/badge/Standard-AUTOSAR-green.svg)](https://www.autosar.org/)
 
-一个基于 STM32F407 的 AUTOSAR 通信栈演示项目，支持 CAN 通信和 UDS 诊断服务。
+> 🎯 **我们的使命：打造一个低门槛学习嵌入式的平台，不需要你有任何的编程经验。**
+
+一个基于 STM32F407 的 AUTOSAR 通信栈演示项目，支持 CAN 通信和 UDS 诊断服务。从零开始，手把手带你入门汽车电子嵌入式开发。
 
 ## 功能特性
 
